@@ -1,0 +1,29 @@
+# Credentials — never commit
+.env
+
+# Export and utility scripts with connection strings
+export_*.csv
+export_summary.txt
+import_to_mongodb.py
+export_collections.py
+migrate_expense_owner.py
+validate_all_collections.py
+
+# Excel data files — contains real family financial data
+*.xlsx
+
+# Duplicate tool files in root — only keep tools/ folder versions
+ingestion_tools.py
+query_tools.py
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# ADK session data
+.adk/
+
+# OS files
+.DS_Store
+Thumbs.db
