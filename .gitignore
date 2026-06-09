@@ -13,8 +13,6 @@ validate_all_collections.py
 *.xlsx
 
 # Duplicate tool files in root — only keep tools/ folder versions
-ingestion_tools.py
-query_tools.py
 
 # Python cache
 __pycache__/
