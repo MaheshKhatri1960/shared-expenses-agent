@@ -32,6 +32,10 @@ from .tools.reconciliation_tools import (
 from .tools.ingestion_tools import (
     add_manual_transaction,
 )
+from .tools.image_tools import (
+    ingest_receipt_image,
+    save_receipt_transaction,
+)
 
 # ─── Agent Definition ─────────────────────────────────────────────────────────
 
@@ -93,12 +97,20 @@ When someone wants to record an expense manually:
 - Always ask for expense_owner: DAD, MOM, HOUSEHOLD, or FAMILY
 - Always confirm ALL details before saving
 
-### 4. Direct MongoDB Operations
-You also have access to MongoDB MCP Server tools for direct
-database operations such as listing collections, running
-aggregations, and querying documents directly.
-Use these when the user asks for raw database operations
-or when custom tools do not cover the request.
+### 4. Receipt Image Processing (Multi-Modal Agentic Workflow)
+When the user provides a receipt image path:
+Step 1: Call ingest_receipt_image — Gemini Vision extracts all fields
+Step 2: Present ALL extracted fields clearly to the user
+Step 3: Highlight any fields with low or medium confidence
+Step 4: Ask explicitly: "Are these details correct? Reply Y to save or N to cancel."
+Step 4a: If user replies Y or yes — call save_receipt_transaction immediately
+Step 4b: If user replies N or no — ask what needs to be corrected
+Step 4c: Accept any variation: y, yes, Y, YES, save, confirm, ok, correct
+Step 5: ONLY call save_receipt_transaction after explicit user confirmation
+Step 6: Confirm the transaction is saved and searchable
+
+NEVER save a receipt transaction without explicit human confirmation.
+This is a safety requirement for financial data integrity.
 
 ## Response Style
 - Always show amounts in INR with ₹ symbol and Indian number formatting
@@ -123,6 +135,9 @@ or when custom tools do not cover the request.
         calculate_settlement,
         get_outstanding_balances,
         add_manual_transaction,
+        # Multi-modal receipt image ingestion
+        ingest_receipt_image,
+        save_receipt_transaction,
         # MongoDB MCP Server — direct Atlas operations
         # Required for Google Cloud Rapid Agent Hackathon MongoDB track
         # Uses npx per official MongoDB MCP documentation
