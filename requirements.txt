@@ -1,5 +1,21 @@
-google-adk>=0.3.0
+# Shared Expenses Agent — Python Dependencies
+# For Cloud Run deployment
+
+# Google ADK — agent framework
+google-adk>=2.2.0
+
+# Google Cloud AI Platform — Vertex AI, embeddings
 google-cloud-aiplatform>=1.40.0
+
+# MongoDB driver
 pymongo>=4.6.0
+
+# MCP protocol support
+mcp>=1.0.0
+
+# Data processing — used by import/export scripts
 pandas>=2.0.0
 openpyxl>=3.1.0
+
+# A2A protocol support — required for --a2a flag in Cloud Run deployment
+a2a-sdk>=0.2.0

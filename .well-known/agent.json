@@ -1,0 +1,126 @@
+{
+  "name": "Shared Household Expenses Agent",
+  "description": "AI-powered shared expense tracker and reconciliation agent for families. Tracks medical care expenses, household utilities, and family expenses stored in MongoDB Atlas with Vector Search. Enables natural language queries, settlement calculations, and expense analytics.",
+  "url": "https://shared-expenses-agent-255697259071.us-central1.run.app"
+  "version": "1.0.0",
+  "documentationUrl": "https://github.com/MaheshKhatri1960/shared-expenses-agent",
+  "preferredTransport": "JSONRPC",
+  "provider": {
+    "organization": "Kaytek Computer Services",
+    "url": "https://kaytek.in"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "authentication": null,
+  "defaultInputModes": ["text"],
+  "defaultOutputModes": ["text"],
+  "skills": [
+    {
+      "id": "search-expenses-semantic",
+      "name": "Semantic Expense Search",
+      "description": "Search expenses using natural language queries. Supports queries like Papa medical bills, nursing staff costs, Mom hospital expenses, utility bills using MongoDB Atlas Vector Search with Vertex AI embeddings.",
+      "tags": ["expenses", "search", "semantic", "mongodb", "vector-search"],
+      "inputModes": ["text"],
+      "outputModes": ["text"],
+      "examples": [
+        "Show me all Papa's medical expenses",
+        "Find nursing staff payments",
+        "Search for medicine purchases"
+      ]
+    },
+    {
+      "id": "get-expenses-by-filter",
+      "name": "Filter Expenses",
+      "description": "Get expenses using structured filters by family member, expense owner (DAD/MOM/HOUSEHOLD/FAMILY), date range, category, or amount range.",
+      "tags": ["expenses", "filter", "mongodb"],
+      "inputModes": ["text"],
+      "outputModes": ["text"],
+      "examples": [
+        "Show expenses paid by AK in March 2026",
+        "Get Dad's expenses for 2026",
+        "Show household bills above 10000"
+      ]
+    },
+    {
+      "id": "get-category-summary",
+      "name": "Category Summary",
+      "description": "Get expense breakdown by category with totals and percentages. Can filter by expense owner (DAD/MOM/HOUSEHOLD/FAMILY).",
+      "tags": ["expenses", "summary", "category", "analytics"],
+      "inputModes": ["text"],
+      "outputModes": ["text"],
+      "examples": [
+        "Give me a category breakdown of all expenses",
+        "What categories does Dad's care fall into?",
+        "Show household expense categories"
+      ]
+    },
+    {
+      "id": "get-member-summary",
+      "name": "Member Contribution Summary",
+      "description": "Get expense summary grouped by family member showing who paid how much and their percentage contribution.",
+      "tags": ["expenses", "members", "contributions", "analytics"],
+      "inputModes": ["text"],
+      "outputModes": ["text"],
+      "examples": [
+        "Who paid the most?",
+        "Show member-wise expense breakdown",
+        "How much did MK contribute?"
+      ]
+    },
+    {
+      "id": "get-period-summary",
+      "name": "Period Summary",
+      "description": "Get expense summary for a specific period (monthly/quarterly/annual) with breakdown by expense owner (DAD/MOM/HOUSEHOLD/FAMILY).",
+      "tags": ["expenses", "period", "monthly", "analytics"],
+      "inputModes": ["text"],
+      "outputModes": ["text"],
+      "examples": [
+        "Give me the monthly summary for June 2026",
+        "Show quarterly expenses for Q1 2026",
+        "What did we spend in 2025?"
+      ]
+    },
+    {
+      "id": "calculate-settlement",
+      "name": "Calculate Settlement",
+      "description": "Calculate who owes whom based on shared expense contributions. Returns net balances and settlement instructions for all family members.",
+      "tags": ["settlement", "reconciliation", "finance"],
+      "inputModes": ["text"],
+      "outputModes": ["text"],
+      "examples": [
+        "Calculate settlement for all time",
+        "Who owes what?",
+        "Reconcile expenses for March 2026"
+      ]
+    },
+    {
+      "id": "get-outstanding-balances",
+      "name": "Outstanding Balances",
+      "description": "Get current outstanding balances across all time showing net positions for all family members.",
+      "tags": ["settlement", "balances", "finance"],
+      "inputModes": ["text"],
+      "outputModes": ["text"],
+      "examples": [
+        "What are the current balances?",
+        "Who still owes money?",
+        "Show overall settlement status"
+      ]
+    },
+    {
+      "id": "add-manual-transaction",
+      "name": "Add Transaction",
+      "description": "Record a new expense transaction manually with automatic Vertex AI embedding generation for semantic search. Supports expense owners: DAD, MOM, HOUSEHOLD, FAMILY.",
+      "tags": ["expenses", "ingestion", "mongodb", "embeddings"],
+      "inputModes": ["text"],
+      "outputModes": ["text"],
+      "examples": [
+        "Add expense: MK paid 5000 to Apollo Pharmacy on 2026-06-08",
+        "Record nursing staff payment of 50000 by AK",
+        "Add household electricity bill"
+      ]
+    }
+  ]
+}

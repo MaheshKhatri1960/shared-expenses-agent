@@ -5,11 +5,19 @@ Google ADK agent that provides intelligent querying,
 reconciliation, and insights on shared family expenses
 stored in MongoDB Atlas.
 
+Uses MongoDB MCP Server for direct Atlas operations
+alongside custom Python tools for semantic search
+and reconciliation.
+
 Usage:
     adk web .
 """
 
+import os
 from google.adk import Agent
+from google.adk.tools.mcp_tool.mcp_toolset import MCPToolset
+from google.adk.tools.mcp_tool.mcp_session_manager import StdioConnectionParams
+from mcp import StdioServerParameters
 from .tools.query_tools import (
     search_expenses_semantic,
     get_expenses_by_filter,
@@ -85,6 +93,13 @@ When someone wants to record an expense manually:
 - Always ask for expense_owner: DAD, MOM, HOUSEHOLD, or FAMILY
 - Always confirm ALL details before saving
 
+### 4. Direct MongoDB Operations
+You also have access to MongoDB MCP Server tools for direct
+database operations such as listing collections, running
+aggregations, and querying documents directly.
+Use these when the user asks for raw database operations
+or when custom tools do not cover the request.
+
 ## Response Style
 - Always show amounts in INR with ₹ symbol and Indian number formatting
 - Show expense_owner clearly in responses — "Dad's expenses", "Mom's expenses"
@@ -99,6 +114,7 @@ When someone wants to record an expense manually:
 - When showing period summaries, always include the DAD/MOM/HOUSEHOLD breakdown
 """,
     tools=[
+        # Custom semantic search and aggregation tools
         search_expenses_semantic,
         get_expenses_by_filter,
         get_category_summary,
@@ -107,5 +123,26 @@ When someone wants to record an expense manually:
         calculate_settlement,
         get_outstanding_balances,
         add_manual_transaction,
+        # MongoDB MCP Server — direct Atlas operations
+        # Required for Google Cloud Rapid Agent Hackathon MongoDB track
+        # Uses npx per official MongoDB MCP documentation
+        # --readOnly flag prevents accidental writes via MCP
+        # Write operations use add_manual_transaction custom tool instead
+        MCPToolset(
+            connection_params=StdioConnectionParams(
+                server_params=StdioServerParameters(
+                    command="npx",
+                    args=[
+                        "-y",
+                        "mongodb-mcp-server@latest",
+                        "--readOnly",
+                    ],
+                    env={
+                        "MDB_MCP_CONNECTION_STRING": os.environ.get("MONGO_URI", ""),
+                    },
+                ),
+                timeout=60,
+            ),
+        )
     ],
 )
