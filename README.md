@@ -233,10 +233,26 @@ MongoDB Atlas (household\_expenses database)
 └── time\_logs       (time tracking)
 
 
+## Architecture Diagram
+![Architecture](screenshots/06_architecture_diagram.png)
+
 
 \## Hackathon
 
 
+## Future Improvements
+- MongoDB Atlas Auto Embeddings (Voyage AI) — replace 
+  manual Vertex AI embedding pipeline
+- Gmail draft ingestion via Gmail MCP Server
+- Time Value of Money settlement calculations at 
+  configurable cost of capital
+- Voice input via Gemini 3.1 Flash Live API
+- Field-level transaction correction tool
+- MongoDB Time Series for daily interest accrual tracking
+- MongoDB Client-Side Field Level Encryption (CSFLE)
+- Full A2A task endpoint for multi-agent communication
+- Ledger Accounting Agent integration via A2A protocol
+- Multi-family household support
 
 Built for the Google Cloud Rapid Agent Hackathon (June 2026).
 
