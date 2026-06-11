@@ -175,6 +175,10 @@ Open http://localhost:8000 in your browser.
 
 \- "Show me all Papa's medical expenses"
 
+### Natural Language Query — Dad's Medical Expenses
+![Papa Medical Expenses Query](screenshots/02_papa_medical_expenses_query.png)
+
+
 \- "Calculate settlement for all time"
 
 \- "Who paid the most?"
