@@ -10,7 +10,7 @@ and MongoDB MCP Server.
 
 
 
-\## The Problem
+\## **The Problem**
 
 
 
@@ -22,7 +22,7 @@ accurate settlements is complex and error-prone without a dedicated system.
 
 
 
-\## The Solution
+\## **The Solution**
 
 
 
@@ -60,6 +60,9 @@ by MongoDB Atlas with Vector Search for semantic understanding.
 \- Expense owner tracking: DAD / MOM / HOUSEHOLD / FAMILY
 
 \- MongoDB MCP Server integration for direct database operations
+
+### MongoDB MCP Server
+![MongoDB MCP Serveer](screenshots/05_mcp_trace.png)
 
 
 
