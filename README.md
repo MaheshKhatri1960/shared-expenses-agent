@@ -170,6 +170,9 @@ Open http://localhost:8000 in your browser.
 
 \- "How much did we spend on nursing staff?"
 
+### Natural Language Query — Nursing Staff Spend
+![Nursing Staff Query](screenshots/01_nursing_staff_query.png)
+
 \- "Show me all Papa's medical expenses"
 
 \- "Calculate settlement for all time"
@@ -178,7 +181,6 @@ Open http://localhost:8000 in your browser.
 
 \- "Give me a category breakdown of all expenses"
 
-\- "Add expense: MK paid 5000 to Apollo Pharmacy on 2026-06-08"
 
 
 
@@ -222,9 +224,9 @@ Tools:
 
 MongoDB Atlas (household\_expenses database)
 
-├── transactions    (16 real records with embeddings)
+├── transactions    (19 real records with embeddings)
 
-├── family\_members  (MK, AK, AC, AR)
+├── family\_members  (4 siblings)
 
 ├── settlements     (calculated settlement records)
 
