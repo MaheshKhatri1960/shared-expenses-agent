@@ -1,4 +1,4 @@
-\# Shared Household Expenses Agent
+\# **Shared Household Expenses Agent**
 
 
 
