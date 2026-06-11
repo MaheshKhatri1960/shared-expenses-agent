@@ -297,9 +297,11 @@ Excel import | Receipt image | Manual entry | Gmail draft (future)
 - Field-level transaction correction tool
 - MongoDB Time Series for daily interest accrual tracking
 - MongoDB Client-Side Field Level Encryption (CSFLE)
-- Full A2A task endpoint for multi-agent communication
-- Ledger Accounting Agent integration via A2A protocol
+- Full A2A task endpoint for multi-agent communication 
+- Multiple Domain Agent integration via A2A protocol
 - Multi-family household support
+- Advanced Expenses Split & Analysis methods
+- Mapping of MongoDB collections to proprietary generic documents 
 
 
 \## **Hackathon**
