@@ -32,10 +32,10 @@ spending patterns, and calculate settlements using natural language — backed
 
 by MongoDB Atlas with Vector Search for semantic understanding.
 
+![Mongodb Atlas Charts](screenshots/07_mongodb_atlas_dashboard.png)
 
 
 \## Features
-
 
 
 \- Natural language expense queries ("Show me Papa's medical expenses")
@@ -47,6 +47,15 @@ by MongoDB Atlas with Vector Search for semantic understanding.
 \- Automatic settlement calculation
 
 \- Manual transaction entry via agent conversation
+
+\- Gemini Image Ingestion & Confirmation before Saving Transaction 
+
+### Gemini — Image Ingestion
+![Gemini Image Ingestion](screenshots/03_Data_Input_Medicine_Bill_2_Gemini_Image_Ingestion_1.png)
+
+### Gemini — Confirmation Before Transaction Saving
+![Gemini Confirmation Before Saving](screenshots/04_Data_Input_Medicine_Bill_2_Gemini_Ingestion_2_Confirmation.png)
+
 
 \- Expense owner tracking: DAD / MOM / HOUSEHOLD / FAMILY
 
