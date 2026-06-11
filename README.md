@@ -224,7 +224,7 @@ Gemini 3.5 Flash (Vertex AI — global endpoint)
 
 ↓
 
-Tools:
+**Tools**:
 
 ├── search\_expenses\_semantic    → MongoDB Atlas Vector Search
 
@@ -246,7 +246,7 @@ Tools:
 
 ↓
 
-MongoDB Atlas (household\_expenses database)
+**MongoDB Atlas (household\_expenses database)**
 
 ├── transactions    (19 real records with embeddings)
 
@@ -257,6 +257,9 @@ MongoDB Atlas (household\_expenses database)
 ├── agent\_memory    (conversation context)
 
 └── time\_logs       (time tracking)
+
+
+![MongoDB](screenshots/10_mongodb_collections.png)
 
 
 ## **Architecture Diagram**
