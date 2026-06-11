@@ -265,6 +265,27 @@ Gemini 3.5 Flash (Vertex AI — global endpoint)
 ## **Architecture Diagram**
 ![Architecture](screenshots/06_architecture_diagram.png)
 
+**Diagram Sections**
+
+**Row 1 — User Layer**:
+Family member → Browser → Cloud Run → Secret Manager → GitHub
+
+**Row 2 — ADK Agent Core**:
+Gemini 3.5 Flash | text-embedding-004 | MongoDB MCP Server | A2A Protocol | HITL Oversight
+
+**Row 3 — 10 Agent Tools**:
+All tools colour-coded by type — query (green), reconciliation (blue), ingestion (orange), image (light blue)
+
+**Row 4 — MongoDB Atlas**:
+5 collections with details + Vector Search + Atlas Charts badges
+
+**Row 5 — Data Ingestion Sources**:
+Excel import | Receipt image | Manual entry | Gmail draft (future)
+
+**Row 6 — Stats Bar**:
+18 transactions | ₹6,71,552 total | ₹2,68,087 settlement | 768 dims | 10 tools | 8 A2A skills | 5 charts | Node 24
+
+
 
 ## **Future Improvements**
 - MongoDB Atlas Auto Embeddings (Voyage AI) — replace 
