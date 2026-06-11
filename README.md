@@ -51,7 +51,7 @@ by MongoDB Atlas with Vector Search for semantic understanding.
 
 \- Automatic settlement calculation
 
-\- Manual transaction entry via agent conversation
+\- Manual transaction entry via agent conversation 
 
 \- Gemini Image Ingestion & Confirmation before Saving Transaction 
 
@@ -194,12 +194,21 @@ Open http://localhost:8000 in your browser.
 
 \- "Who paid the most?"
 
+\- "Find CLOPITAB medicine expenses"
+
+### Natural Language Query — Specific Medicine Search - 1
+![Specific Medicine Search](screenshots/08_query_find_clopitab_medicine_1.png)
+
+### Natural Language Query — Specific Medicine Search - 2
+![Specific Medicine Search](screenshots/09_query_find_clopitab_medicine_2.png)
+
+
 \- "Give me a category breakdown of all expenses"
 
 
 
 
-\## Architecture
+\## **Architecture**
 
 
 
@@ -250,14 +259,11 @@ MongoDB Atlas (household\_expenses database)
 └── time\_logs       (time tracking)
 
 
-## Architecture Diagram
+## **Architecture Diagram**
 ![Architecture](screenshots/06_architecture_diagram.png)
 
 
-\## Hackathon
-
-
-## Future Improvements
+## **Future Improvements**
 - MongoDB Atlas Auto Embeddings (Voyage AI) — replace 
   manual Vertex AI embedding pipeline
 - Gmail draft ingestion via Gmail MCP Server
@@ -270,6 +276,9 @@ MongoDB Atlas (household\_expenses database)
 - Full A2A task endpoint for multi-agent communication
 - Ledger Accounting Agent integration via A2A protocol
 - Multi-family household support
+
+
+\## **Hackathon**
 
 Built for the Google Cloud Rapid Agent Hackathon (June 2026).
 
