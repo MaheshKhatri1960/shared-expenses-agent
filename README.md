@@ -20,6 +20,9 @@ care for an ailing parent — tracking contributions fairly and calculating
 
 accurate settlements is complex and error-prone without a dedicated system.
 
+![Expense Categories](screenshots/12_Input_Categories.png)
+
+
 
 
 \## **The Solution**
