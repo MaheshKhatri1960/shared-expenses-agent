@@ -35,10 +35,15 @@ by MongoDB Atlas with Vector Search for semantic understanding.
 ![Mongodb Atlas Charts](screenshots/07_mongodb_atlas_dashboard.png)
 
 
-\## Features
+\## **Features**
 
 
 \- Natural language expense queries ("Show me Papa's medical expenses")
+
+### Natural Language Query — Dad's Medical Expenses
+![Papa Medical Expenses Query](screenshots/02_papa_medical_expenses_query.png)
+
+
 
 \- Semantic search using MongoDB Atlas Vector Search + Vertex AI embeddings
 
@@ -184,12 +189,6 @@ Open http://localhost:8000 in your browser.
 
 ### Natural Language Query — Nursing Staff Spend
 ![Nursing Staff Query](screenshots/01_nursing_staff_query.png)
-
-\- "Show me all Papa's medical expenses"
-
-### Natural Language Query — Dad's Medical Expenses
-![Papa Medical Expenses Query](screenshots/02_papa_medical_expenses_query.png)
-
 
 \- "Calculate settlement for all time"
 
