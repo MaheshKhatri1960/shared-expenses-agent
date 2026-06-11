@@ -35,28 +35,6 @@ by MongoDB Atlas with Vector Search for semantic understanding.
 ![Mongodb Atlas Charts](screenshots/07_mongodb_atlas_dashboard.png)
 
 
-## **System Capability Map**
-
-**Layer 1: Data Ingestion**      — Excel, Image, Manual, Gmail
-
-**Layer 2: Embedding & Search**  — Vertex AI, Vector Search
-
-**Layer 3: Query & Analytics**   — NL queries, Aggregation
-
-**Layer 4: Settlement**          — Split, TVM, Reconciliation
-
-**Layer 5: MCP Integration**     — MongoDB MCP, StdioProtocol
-
-**Layer 6: Multi-Modal**         — Gemini Vision, HITL
-
-**Layer 7: A2A Protocol**        — Agent Card, Multi-agent
-
-**Layer 8: Visualization**       — Atlas Charts, Dashboard
-
-**Layer 9: Security**            — Secret Manager, CSFLE
-
-![Noun Verb Link Noun Diagram](screenshots/11_nvln_diagram.png)
-
 \## **Features**
 
 
@@ -307,6 +285,29 @@ Excel import | Receipt image | Manual entry | Gmail draft (future)
 **Row 6 — Stats Bar**:
 18 transactions | ₹6,71,552 total | ₹2,68,087 settlement | 768 dims | 10 tools | 8 A2A skills | 5 charts | Node 24
 
+
+
+## **System Capability Map**
+
+**Layer 1: Data Ingestion**      — Excel, Image, Manual, Gmail
+
+**Layer 2: Embedding & Search**  — Vertex AI, Vector Search
+
+**Layer 3: Query & Analytics**   — NL queries, Aggregation
+
+**Layer 4: Settlement**          — Split, TVM, Reconciliation
+
+**Layer 5: MCP Integration**     — MongoDB MCP, StdioProtocol
+
+**Layer 6: Multi-Modal**         — Gemini Vision, HITL
+
+**Layer 7: A2A Protocol**        — Agent Card, Multi-agent
+
+**Layer 8: Visualization**       — Atlas Charts, Dashboard
+
+**Layer 9: Security**            — Secret Manager, CSFLE
+
+![Noun Verb Link Noun Diagram](screenshots/11_nvln_diagram.png)
 
 
 ## **Future Improvements**
